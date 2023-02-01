@@ -4,9 +4,9 @@ package search;
  * @author: MaoYanDong
  * @create: 2023-01-10 10:34
  * @Version 1.0
- * @description: 查找算法Demo
+ * @description: 二分查找算法Demo
  */
-public class Main {
+public class BSearchMain {
     public static void main(String[] args) {
         int[] a = {1,2,4,6,7,9,12,18,22,29,36};
         int index = bSearch(a, a.length, 18);
@@ -50,6 +50,14 @@ public class Main {
         return bSearchInternally(a, 0, n - 1, val);
     }
 
+    /**
+     * 最简单的二分查找
+     * @param a
+     * @param low
+     * @param high
+     * @param val
+     * @return
+     */
     private static int bSearchInternally(int[] a, int low, int high, int val) {
         if (low > high) {
             return -1;
@@ -63,4 +71,9 @@ public class Main {
             return bSearchInternally(a, low, mid - 1, val);
         }
     }
+
+    /**
+     * 二分查找的几个变种
+     */
+
 }
